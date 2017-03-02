@@ -1,0 +1,10 @@
+﻿@model Domain.Entities.Person
+
+
+    @using (Html.BeginForm()) {
+    <p>FirstName: @Html.TextBoxFor(x => x.FirstName)</p>
+    <p>LastName: @Html.TextBoxFor(x => x.LastName)</p>
+    <p>Age: @Html.TextBoxFor(x => x.Age)</p>
+    <p>Sex: @Html.TextBoxFor(x => x.Sex)</p>
+    <input type="submit" value="submit"/>
+    }

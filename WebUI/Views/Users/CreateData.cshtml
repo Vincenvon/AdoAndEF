@@ -1,0 +1,9 @@
+﻿@model Domain.Entities.Person
+<h1>Edit Create new data </h1>
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="ok" />
+    @Html.ActionLink("Cancel", "List", "Users");
+}
+

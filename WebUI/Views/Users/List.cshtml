@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Domain.Entities.Person>
+@{
+    ViewBag.Title = "Users";
+}
+
+<html>
+<body>
+    <table>
+        <tr>
+            <th> @Html.DisplayNameFor(model => model.ID)</th>
+            <th> @Html.DisplayNameFor(model => model.FirstName)</th>
+            <th> @Html.DisplayNameFor(model => model.LastName)</th>
+            <th> @Html.DisplayNameFor(model => model.Sex)</th>
+            <th> @Html.DisplayNameFor(model => model.Age)</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Sex</td>
+                <td>@item.Age</td>
+                <td>@Html.ActionLink("Edit", "EditData", new { id = item.ID })|@Html.ActionLink("Delete", "DeleteData", new { id = item.ID })</td>
+            </tr>
+
+        }
+    </table>
+    <p>@Html.ActionLink("Create data", "CreateData")</p>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,41 @@
+﻿div#header {
+background-color:#444;
+border-bottom:2px solid #111;
+color:white;
+}
+    div#header div.title {
+    font-size:2em;
+    padding: .6em;
+    
+    }
+
+#nav {
+background-color:#b09292;
+border-bottom:2px solid #111;
+color:white;
+list-style:none;
+font-weight:bold;
+margin-bottom:10px;
+}
+    #nav li {
+    float:left;
+    margin-right:10px;
+    position:relative;
+    display:block;
+    }
+    #nav ul {
+    list-style:none;
+    position:absolute;
+    left:-9999px;
+    opacity:0;
+    }
+        #nav ul li {
+        padding-top:1px;
+        float:none;
+        background:#00ffff;
+        }
+    #nav li:hover ul {
+    left:0;
+    opacity:1;
+    }
+
