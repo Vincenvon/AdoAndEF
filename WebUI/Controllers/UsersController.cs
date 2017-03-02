@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Domain.Abstract;
 using Domain.Entities;
@@ -10,8 +8,8 @@ namespace WebUi.Controllers
 {
     public class UsersController : Controller
     {
-        private IProductRepository repository;
-        public UsersController(IProductRepository productRepository)
+        private IPersonRepository repository;
+        public UsersController(IPersonRepository productRepository)
         {
             this.repository = productRepository;
         }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Domain.Entities;
 
@@ -68,10 +65,12 @@ namespace Domain.Concrete
                 try
                 {
                     connection.Open();
-                    string StrCommand = String.Format("DELETE FROM People WHERE ID={0}", ID);
+                    string StrCommand = "DELETE FROM People WHERE ID=@ID";
                     SqlCommand command = new SqlCommand(StrCommand, connection);
+                    SqlParameter idParam = new SqlParameter("@ID", System.Data.SqlDbType.Int);
+                    idParam.Value = ID;
+                    command.Parameters.Add(idParam);
                     command.ExecuteNonQuery();
-
                 }
                 catch (Exception ex)
                 {

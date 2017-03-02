@@ -3,7 +3,7 @@ using Domain.Entities;
 
 namespace Domain.Abstract
 {
-    public interface IProductRepository
+    public interface IPersonRepository
     {
         IQueryable<Person> Persons { get; }
         void DeleteData(int ID);

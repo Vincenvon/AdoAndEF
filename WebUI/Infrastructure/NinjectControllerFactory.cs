@@ -19,7 +19,7 @@ namespace WebUi.Ifrastructure
             return controllerType == null ? null : (IController)ninjectKernel.Get(controllerType);
         }
         private void AddBindings() {
-            ninjectKernel.Bind<IProductRepository>().To<MyUserRepository>();
+            ninjectKernel.Bind<IPersonRepository>().To<MyUserRepository>();
             
         }
     }

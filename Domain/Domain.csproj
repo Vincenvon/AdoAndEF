@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IProductRepository.cs" />
+    <Compile Include="Abstract\IPersonRepository.cs" />
     <Compile Include="Concrete\DataBase.cs" />
     <Compile Include="Concrete\MyUserRepository.cs" />
     <Compile Include="EF\EFContext.cs" />

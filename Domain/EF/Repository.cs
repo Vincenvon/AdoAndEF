@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Domain.Abstract;
 using Domain.Entities;
 
 namespace Domain.EF
 {
-    public class Repository:IProductRepository
+    public class Repository:IPersonRepository
     {
         private EFContext context = new EFContext();
         public IQueryable<Person> Persons
@@ -29,8 +25,9 @@ namespace Domain.EF
                 temp.FirstName = pers.FirstName;
                 temp.LastName = pers.LastName;
                 temp.Sex = pers.Sex;
+                context.SaveChanges();
             }
-            context.SaveChanges();
+            
         }
 
         public void DeleteData(int ID) {

@@ -21,7 +21,7 @@ namespace WebUI.Infrastructure
         }
         private void AddBindings()
         {
-            ninjectKernel.Bind<IProductRepository>().To<Repository>();
+            ninjectKernel.Bind<IPersonRepository>().To<Repository>();
             
         }
     }
